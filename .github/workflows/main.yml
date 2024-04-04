@@ -1,0 +1,20 @@
+name: Python package
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9"]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Write a multi-line message
+      run: |
+        echo This demo file shows a 
+        echo very basic and easy-to-understand workflow.
